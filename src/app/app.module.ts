@@ -12,7 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ContributorsComponent } from './components/contributors/contributors.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ApiService } from './shared/services/api.service';
-
+import { PageService } from './shared/services/page.service';
 
 
 
@@ -31,7 +31,7 @@ import { ApiService } from './shared/services/api.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, PageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

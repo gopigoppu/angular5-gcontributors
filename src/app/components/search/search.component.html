@@ -10,89 +10,46 @@
   </form>
 </div>
 
-<div class="container-fluid repo-container">
+<div class="container repo-container" *ngIf="searchContainer">
 
   <div class="card">
     <div class="card-header">
-      Repositories that maches "angular5"
+      Repositories that maches "{{ searchQuery.value }}"
     </div>
     <div class="card-body">
 
-      <div class="row">
-
-        <div class="col-sm-6 repo-box">
+      <div class="row" *ngIf="!searchData">
+        <div class="col-xs-12 col-sm-6 col-md-3">OOPS! No repository available!</div>
+      </div>
+      <div class="row" *ngIf="searchData">
+        <div class="col-sm-6 repo-box" *ngFor="let item of searchData">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">
-                <a href="https://github.com/dtrupenn/Tetris">
-                  dtrupenn/Tetris</a>
+                <a href="{{ item.full_name }}">
+                  {{ item.full_name }}</a>
               </h5>
-              <p>A C implementation of Tetris using Pennsim through LC4</p>
+              <p class="repoDescription">{{ item.description }}</p>
               <span class="owner " style="float:left">Owner :
-                <a href="https://api.github.com/users/dtrupenn" target="_blank">dtrupenn</a>
+                <a href="{{ item.owner.html_url }}" target="_blank">{{ item.owner.login }}</a>
               </span>
-              <span class=" updated-on" style="float:right  ">Updated on : Sat Jan 05 2013</span>
+              <span class=" updated-on" style="float:right  ">Updated on : {{ item.updated_at | date }}</span>
             </div>
           </div>
         </div>
-
-        <div class="col-sm-6 repo-box">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">
-                <a href="https://github.com/dtrupenn/Tetris">
-                  dtrupenn/Tetris</a>
-              </h5>
-              <p>A C implementation of Tetris using Pennsim through LC4</p>
-              <span class="owner " style="float:left">Owner :
-                <a href="https://api.github.com/users/dtrupenn" target="_blank">dtrupenn</a>
-              </span>
-              <span class=" updated-on" style="float:right  ">Updated on : Sat Jan 05 2013</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 repo-box">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">
-                <a href="https://github.com/dtrupenn/Tetris">
-                  dtrupenn/Tetris</a>
-              </h5>
-              <p>A C implementation of Tetris using Pennsim through LC4</p>
-              <span class="owner " style="float:left">Owner :
-                <a href="https://api.github.com/users/dtrupenn" target="_blank">dtrupenn</a>
-              </span>
-              <span class=" updated-on" style="float:right  ">Updated on : Sat Jan 05 2013</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 repo-box">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">
-                <a href="https://github.com/dtrupenn/Tetris">
-                  dtrupenn/Tetris</a>
-              </h5>
-              <p>A C implementation of Tetris using Pennsim through LC4</p>
-              <span class="owner " style="float:left">Owner :
-                <a href="https://api.github.com/users/dtrupenn" target="_blank">dtrupenn</a>
-              </span>
-              <span class=" updated-on" style="float:right  ">Updated on : Sat Jan 05 2013</span>
-            </div>
-          </div>
-        </div>
-
       </div>
 
+
+
     </div>
+
   </div>
+</div>
 
 
 
 
 
-  <!-- <div class="container search-container">
+<!-- <div class="container search-container">
   <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div> -->

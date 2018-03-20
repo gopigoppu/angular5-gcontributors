@@ -16,6 +16,12 @@
   border-radius: 25px !important;
 }
 
+.repoDescription{
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .owner{
   width: 50%;
   float: left;
