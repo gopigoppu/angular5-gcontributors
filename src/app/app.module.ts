@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -9,6 +11,9 @@ import { SearchComponent } from './components/search/search.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ContributorsComponent } from './components/contributors/contributors.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ApiService } from './shared/services/api.service';
+
+
 
 
 @NgModule({
@@ -22,9 +27,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
