@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SearchComponent } from './components/search/search.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ContributorsComponent } from './components/contributors/contributors.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ContributorsComponent } from './components/contributors/contributors.co
     LoginComponent,
     SearchComponent,
     HeaderComponent,
-    ContributorsComponent
+    ContributorsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
