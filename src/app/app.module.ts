@@ -14,6 +14,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ApiService } from './shared/services/api.service';
 import { PageService } from './shared/services/page.service';
 
+import { AuthGithubService } from './shared/auth/auth-github.service';
+import { CallbackComponent } from './components/callback/callback.component';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { PageService } from './shared/services/page.service';
     SearchComponent,
     HeaderComponent,
     ContributorsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,11 @@ import { PageService } from './shared/services/page.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ApiService, PageService],
+  providers: [
+    ApiService,
+    PageService,
+    AuthGithubService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
