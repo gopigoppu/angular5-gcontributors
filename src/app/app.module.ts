@@ -16,6 +16,7 @@ import { PageService } from './shared/services/page.service';
 
 import { AuthGithubService } from './shared/auth/auth-github.service';
 import { CallbackComponent } from './components/callback/callback.component';
+import { NgHttpLoaderModule } from 'ng-http-loader/ng-http-loader.module';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { CallbackComponent } from './components/callback/callback.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgHttpLoaderModule
   ],
   providers: [
     ApiService,
