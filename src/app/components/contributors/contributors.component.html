@@ -10,17 +10,17 @@
 
 
         <!-- Contributor -->
-        <div class="col-xs-12 col-sm-6 col-md-3 contributor-card">
+        <div class="col-xs-12 col-sm-6 col-md-3 contributor-card" *ngFor="let contributor of contributors">
           <div class="card">
             <div class="card-body text-center">
               <p>
-                <img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image">
+                <img class=" img-fluid contributor-avatar" [src]="contributor.avatar_url" alt="card image">
               </p>
               <h4 class="card-title">
-                <a href=""> Sunlimetech </a>
+                <a href="{{ contributor.html_url }}" target="_blank"> {{ contributor.login }} </a>
               </h4>
 
-              <button class="btn btn-primary btn-sm">Follow
+              <button class="btn btn-primary btn-sm" (click)="followContributor(contributor.login)">Follow
                 <i class="fa fa-plus"></i>
               </button>
             </div>
@@ -28,138 +28,6 @@
         </div>
         <!-- ./Contributor -->
 
-        <!-- Contributor -->
-        <div class="col-xs-12 col-sm-6 col-md-3 contributor-card">
-          <div class="card">
-            <div class="card-body text-center">
-              <p>
-                <img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image">
-              </p>
-              <h4 class="card-title">
-                <a href=""> Sunlimetech </a>
-              </h4>
-
-              <button class="btn btn-primary btn-sm">Follow
-                <i class="fa fa-plus"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- ./Contributor -->
-
-        <!-- Contributor -->
-        <div class="col-xs-12 col-sm-6 col-md-3 contributor-card">
-          <div class="card">
-            <div class="card-body text-center">
-              <p>
-                <img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image">
-              </p>
-              <h4 class="card-title">
-                <a href=""> Sunlimetech </a>
-              </h4>
-
-              <button class="btn btn-primary btn-sm">Follow
-                <i class="fa fa-plus"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- ./Contributor -->
-
-        <!-- Contributor -->
-        <div class="col-xs-12 col-sm-6 col-md-3 contributor-card">
-          <div class="card">
-            <div class="card-body text-center">
-              <p>
-                <img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image">
-              </p>
-              <h4 class="card-title">
-                <a href=""> Sunlimetech </a>
-              </h4>
-
-              <button class="btn btn-primary btn-sm">Follow
-                <i class="fa fa-plus"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- ./Contributor -->
-
-        <!-- Contributor -->
-        <div class="col-xs-12 col-sm-6 col-md-3 contributor-card">
-          <div class="card">
-            <div class="card-body text-center">
-              <p>
-                <img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image">
-              </p>
-              <h4 class="card-title">
-                <a href=""> Sunlimetech </a>
-              </h4>
-
-              <button class="btn btn-primary btn-sm">Follow
-                <i class="fa fa-plus"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- ./Contributor -->
-
-        <!-- Contributor -->
-        <div class="col-xs-12 col-sm-6 col-md-3 contributor-card">
-          <div class="card">
-            <div class="card-body text-center">
-              <p>
-                <img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image">
-              </p>
-              <h4 class="card-title">
-                <a href=""> Sunlimetech </a>
-              </h4>
-
-              <button class="btn btn-primary btn-sm">Follow
-                <i class="fa fa-plus"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- ./Contributor -->
-
-        <!-- Contributor -->
-        <div class="col-xs-12 col-sm-6 col-md-3 contributor-card">
-          <div class="card">
-            <div class="card-body text-center">
-              <p>
-                <img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image">
-              </p>
-              <h4 class="card-title">
-                <a href=""> Sunlimetech </a>
-              </h4>
-
-              <button class="btn btn-primary btn-sm">Follow
-                <i class="fa fa-plus"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- ./Contributor -->
-
-        <!-- Contributor -->
-        <div class="col-xs-12 col-sm-6 col-md-3 contributor-card">
-          <div class="card">
-            <div class="card-body text-center">
-              <p>
-                <img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image">
-              </p>
-              <h4 class="card-title">
-                <a href=""> Sunlimetech </a>
-              </h4>
-
-              <button class="btn btn-primary btn-sm">Follow
-                <i class="fa fa-plus"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- ./Contributor -->
 
 
 

@@ -8,7 +8,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 const routes: Routes = [
   { path: 'search', component: SearchComponent },
-  { path: 'contributors', component: ContributorsComponent },
+  { path: 'contributors/:userid/:repoid', component: ContributorsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'callback', component: CallbackComponent },
   { path: '', redirectTo: 'search', pathMatch: 'full' },

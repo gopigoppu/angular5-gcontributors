@@ -36,10 +36,11 @@ export class AuthGithubService {
         window.location.hash = '';
         this.getUserInfo(authResult);
         console.log(authResult);
+        localStorage.setItem('token', authResult.accessToken);
       } else if (err) {
         console.error(`Error: ${err.error}`);
       }
-      this.router.navigate(['/']);
+      this.router.navigate(['/search']);
     });
   }
 

@@ -26,7 +26,7 @@ export class SearchComponent implements OnInit {
       return;
     }
     this.apiService.getRepos(searchQuery).subscribe((data: any) => {
-      // console.log(data.items);
+      console.log(data.items);
       this.searchContainer = true;
       if (data.items.length > 0) {
         this.searchData = data.items;
