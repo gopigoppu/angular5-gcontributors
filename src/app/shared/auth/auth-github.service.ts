@@ -35,8 +35,10 @@ export class AuthGithubService {
       if (authResult && authResult.accessToken) {
         window.location.hash = '';
         this.getUserInfo(authResult);
+        console.log(this.getUserInfo(authResult));
         console.log(authResult);
-        localStorage.setItem('token', authResult.accessToken);
+        localStorage.setItem('access_token', authResult.accessToken);
+        localStorage.setItem('id_token', authResult.idToken);
       } else if (err) {
         console.error(`Error: ${err.error}`);
       }
@@ -47,7 +49,8 @@ export class AuthGithubService {
   getAccessToken() {
     this.auth0.checkSession({}, (err, authResult) => {
       if (authResult && authResult.accessToken) {
-        this.getUserInfo(authResult);
+        // this.getUserInfo(authResult);
+        console.log(this.getUserInfo(authResult));
       } else if (err) {
         console.log(err);
         this.logout();
